@@ -169,7 +169,10 @@ void buildQuiz() {
     string cat;
     while (true) {
       cout << "Enter category: ";
-      cin >> cat;
+      if (!(cin >> cat)) {
+        cout << "\nInput ended unexpectedly. Returning to main menu.\n\n";
+        return;
+      }
       if (isValidCategory(cat)) break;
       cout << "Invalid input\n";
     }
@@ -177,27 +180,33 @@ void buildQuiz() {
     int num_q = 0;
     while (true) {
       cout << "How many questions from " << cat << "? ";
-      if (cin >> num_q && num_q > 0) break;
+      if (!(cin >> num_q)) {
+        cout << "\nInput ended unexpectedly. Returning to main menu.\n\n";
+        return;
+      }
+      if (num_q > 0) break;
       cout << "Please enter a positive number.\n";
-      cin.clear();
-      cin.ignore(10000, '\n');
     }
 
     while (true) {
       cout << "Enter " << num_q << " question IDs separated by space: ";
       vector<int> qids(num_q);
       bool valid = true;
+      bool streamEnded = false;
 
       for (int j = 0; j < num_q; j++) {
         if (!(cin >> qids[j])) {
-          valid = false;
-          cin.clear();
-          cin.ignore(10000, '\n');
+          streamEnded = true;
           break;
         }
         if (!isValidQID(cat, qids[j])) {
           valid = false;
         }
+      }
+
+      if (streamEnded) {
+        cout << "\nInput ended unexpectedly. Returning to main menu.\n\n";
+        return;
       }
 
       if (valid) {
@@ -231,11 +240,13 @@ void playQuiz() {
     cout << "Select game mode:\n";
     cout << "1. Human vs Human\n";
     cout << "2. Human vs AI\n";
-    if ((cin >> mode) && (mode == 1 || mode == 2)) break;
+    if (!(cin >> mode)) {
+      cout << "\nInput ended unexpectedly. Returning to main menu.\n\n";
+      return;
+    }
+    if (mode == 1 || mode == 2) break;
 
     cout << "Invalid input. Please enter 1 or 2.\n";
-    cin.clear();
-    cin.ignore(10000, '\n');
   }
 
   Question* curr = myQuiz.head;
@@ -253,6 +264,10 @@ void playQuiz() {
 
     int ans;
     if (!(cin >> ans)) {
+      if (cin.eof()) {
+        cout << "\nInput ended unexpectedly. Returning to main menu.\n\n";
+        return;
+      }
       cout << "Invalid input, please enter 0, 1, or 2.\n\n";
       cin.clear();
       cin.ignore(10000, '\n');
@@ -310,11 +325,13 @@ void viewReport() {
     cout << "Select game mode for report:\n";
     cout << "1. Human vs Human\n";
     cout << "2. Human vs AI\n";
-    if ((cin >> mode) && (mode == 1 || mode == 2)) break;
+    if (!(cin >> mode)) {
+      cout << "\nInput ended unexpectedly. Returning to main menu.\n\n";
+      return;
+    }
+    if (mode == 1 || mode == 2) break;
 
     cout << "Invalid input. Please enter 1 or 2.\n";
-    cin.clear();
-    cin.ignore(10000, '\n');
   }
 
   Question* curr = myQuiz.head;
