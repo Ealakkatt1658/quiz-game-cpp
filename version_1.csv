@@ -1,10 +1,21 @@
 category,qid,context,question,ans0,ans1,ans2,label,ai
-Geography,1,World capitals,What is the capital of France?,London,Paris,Berlin,1,1
-Geography,2,World capitals,What is the capital of Japan?,Seoul,Beijing,Tokyo,2,2
+Geography,1,World Capitals,What is the capital of France?,London,Paris,Berlin,1,1
+Geography,2,World Capitals,What is the capital of Japan?,Seoul,Beijing,Tokyo,2,2
 Geography,3,Landmarks,Which continent is the Sahara Desert located on?,Asia,Africa,South America,1,1
-Science,1,Chemistry basics,What is the chemical symbol for water?,H2O,O2,CO2,0,0
+Geography,4,Rivers,Which river is traditionally considered the longest in the world?,Amazon,Nile,Yangtze,1,1
+Science,1,Chemistry Basics,What is the chemical symbol for water?,H2O,O2,CO2,0,0
 Science,2,Astronomy,Which planet is known as the Red Planet?,Venus,Mars,Jupiter,1,1
 Science,3,Biology,What is the powerhouse of the cell?,Nucleus,Ribosome,Mitochondria,2,2
+Science,4,Physics,What force pulls objects toward the center of the Earth?,Magnetism,Gravity,Friction,1,1
 History,1,US History,In what year did the United States declare independence?,1776,1812,1865,0,0
-History,2,Ancient civilizations,The Great Pyramid of Giza was built in which country?,Egypt,Mexico,Greece,0,0
+History,2,Ancient Civilizations,The Great Pyramid of Giza was built in which country?,Egypt,Mexico,Greece,0,0
 History,3,World Wars,World War II ended in what year?,1943,1945,1950,1,1
+History,4,Exploration,Who is credited with leading the first European sea voyage to reach India?,Christopher Columbus,Vasco da Gama,Ferdinand Magellan,1,1
+Sports,1,Olympics,How often are the Summer Olympic Games held?,Every 2 years,Every 4 years,Every 5 years,1,1
+Sports,2,Football,How many players from each team are on the field at once in soccer?,9,10,11,2,2
+Sports,3,Tennis,What is a score of zero called in tennis?,Love,Deuce,Ace,0,0
+Sports,4,Basketball,How many points is a standard free throw worth in basketball?,1,2,3,0,0
+Technology,1,Computing History,Who is widely credited as a co-founder of Apple Inc.?,Bill Gates,Steve Jobs,Mark Zuckerberg,1,1
+Technology,2,Programming,Which language is this quiz game written in?,Python,Java,C++,2,2
+Technology,3,Internet,What does HTTP stand for?,HyperText Transfer Protocol,High Transfer Text Protocol,HyperText Type Protocol,0,0
+Technology,4,Hardware,What does CPU stand for?,Central Processing Unit,Central Program Utility,Computer Processing Unibody,0,0
