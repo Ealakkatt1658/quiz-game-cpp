@@ -1,0 +1,10 @@
+category,qid,context,question,ans0,ans1,ans2,label,ai
+Geography,1,World capitals,What is the capital of France?,London,Paris,Berlin,1,1
+Geography,2,World capitals,What is the capital of Japan?,Seoul,Beijing,Tokyo,2,2
+Geography,3,Landmarks,Which continent is the Sahara Desert located on?,Asia,Africa,South America,1,1
+Science,1,Chemistry basics,What is the chemical symbol for water?,H2O,O2,CO2,0,0
+Science,2,Astronomy,Which planet is known as the Red Planet?,Venus,Mars,Jupiter,1,1
+Science,3,Biology,What is the powerhouse of the cell?,Nucleus,Ribosome,Mitochondria,2,2
+History,1,US History,In what year did the United States declare independence?,1776,1812,1865,0,0
+History,2,Ancient civilizations,The Great Pyramid of Giza was built in which country?,Egypt,Mexico,Greece,0,0
+History,3,World Wars,World War II ended in what year?,1943,1945,1950,1,1
